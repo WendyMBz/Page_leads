@@ -1,0 +1,49 @@
+body {
+    background-color: #EBEBF5;
+}
+
+.logo-form {
+    width: 30.6rem;
+    margin-bottom: -2.5rem;
+}
+
+.cartao {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px #55a6ff38;
+    width: 100%;
+    max-width: 35rem;
+    padding: 1.75rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+.container {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex--center {
+    align-items: center;
+    justify-content: center;
+}
+
+.flex--column {
+    flex-direction: column;
+}
+
+.formulario {
+    margin-top: 2rem;
+}
+
+.input {
+    box-sizing: border-box;
+    padding: 0.375rem 0.5rem 0.5rem;
+    height: 2.25rem;
+    width: 100%;
+
+}
