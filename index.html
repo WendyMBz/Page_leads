@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <!--STEP 2-->
     <!--This part needs to be copied from the STEP 2 field of the lending edit page-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
     <script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
     <link rel="stylesheet" href="./css/card.css">
@@ -16,6 +16,7 @@
          * Example: "Email": "#MyEmailField".
          * If you don't have a field from the list below placed on your landing, leave the placeholder or remove the line.
          */
+
         var config = {
             fields: {
                 "Subject": "#subject-field", // Case subject
@@ -23,10 +24,9 @@
                 "Name": "#name-field", // Visitor's name code
                 "Phone": "#phone-field", // Visitor's phone number
             },
-            customFields: {},
-            landingId: "4eeadeb6-6372-4119-b07e-cc60d9b5c193",
+            landingId: "0fed1f55-74d4-4a42-9fab-0d67a81e9e10",
             serviceUrl: "https://cococo.creatio.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
-            redirectUrl: "",
+            redirectUrl: "https://cococo.co.cr/",
             onSuccess: function (response) {
                 window.alert(response.resultMessage);
             },
@@ -62,7 +62,6 @@
         <section class="cartao">
             <h1>Landing</h1>
             <div>
-                <h2>Case form</h2>
                 <form class="mainForm  formulario flex flex--column" name="landingForm"
                     onSubmit="createObject(); return false">
                     Asunto:<br>
