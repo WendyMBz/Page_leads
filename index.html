@@ -1,57 +1,46 @@
 <!DOCTYPE html>
 <html>
+    <link rel="stylesheet" href="./css/card.css">
 
 <head>
     <meta charset="UTF-8">
-    <!--STEP 2-->
-    <!--This part needs to be copied from the STEP 2 field of the lending edit page-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
     <script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
-    <link rel="stylesheet" href="./css/card.css">
     <script>
-        /**
-         * Replace the "css-selector" placeholders in the code below with the element selectors on your landing page.
-         * You can use #id or any other CSS selector that will define the input field explicitly.
-         * Example: "Email": "#MyEmailField".
-         * If you don't have a field from the list below placed on your landing, leave the placeholder or remove the line.
-         */
-
-        var config = {
-            fields: {
-                "Subject": "#subject-field", // Case subject
-                "Email": "#email-field", // Visitor's email
-                "Name": "#name-field", // Visitor's name code
-                "Phone": "#phone-field", // Visitor's phone number
-            },
-            landingId: "0fed1f55-74d4-4a42-9fab-0d67a81e9e10",
-            serviceUrl: "https://cococo.creatio.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
-            redirectUrl: "https://cococo.co.cr/",
-            onSuccess: function (response) {
-                window.alert(response.resultMessage);
-            },
-            onError: function (response) {
-                window.alert(response.resultMessage);
-            }
-        };
-        /**
-         * The function below creates a object from the submitted data.
-         * Bind this function call to the "onSubmit" event of the form or any other elements events.
-         * Example: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
-         */
-        function createObject() {
-
-            landing.createObjectFromLanding(config)
-        }
-        /**
-        * The function below inits landing page using URL parameters.
-        */
-        function initLanding() {
-            landing.initLanding(config);
-        }
-        jQuery(document).ready(initLanding);
+    /**
+    * Reemplace los "css-selector en el código a continuación con los selectores de elementos en su página de destino.
+    * Puede usar #id o cualquier otro selector de CSS que defina el campo de entrada explícitamente.
+    * Por ejemplo: "Email": "#MyEmailField".
+    * Si no tiene un campo de la lista a continuación colocado en su rellano, deje el marcador de posición o elimine la línea.
+    */
+    var config = {
+        fields: {
+            "Name": "#name-field", // Name of a contact, submitting a case
+            "Phone": "#phone-field", // Contact's mobile phone
+            "Email": "#email-field", // Contact's email
+            "Subject": "#subject-field", // Subject of a submitted case
+        },
+        landingId: "0fed1f55-74d4-4a42-9fab-0d67a81e9e10",
+        serviceUrl: "https://cococo.creatio.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
+        redirectUrl: "https://cococo.co.cr/"
+    };
+    /**
+    * The function below creates a object from the submitted data.
+    * Bind this function call to the "onSubmit" event of the form or any other elements events.
+    * Example: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
+    */
+    function createObject() {
+        landing.createObjectFromLanding(config)
+    }
+    /**
+    * The function below inits landing page using URL parameters.
+    */
+    function initLanding() {
+        landing.initLanding(config)
+    }
+    jQuery(document).ready(initLanding)
     </script>
-    <!--STEP 2-->
 </head>
 
 <body>
