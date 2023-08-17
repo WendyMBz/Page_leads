@@ -1,19 +1,12 @@
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="./css/card.css">
-
 <head>
     <meta charset="UTF-8">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
     <script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
+    <link rel="stylesheet" href="./css/card.css">
     <script>
-    /**
-    * Reemplace los "css-selector en el código a continuación con los selectores de elementos en su página de destino.
-    * Puede usar #id o cualquier otro selector de CSS que defina el campo de entrada explícitamente.
-    * Por ejemplo: "Email": "#MyEmailField".
-    * Si no tiene un campo de la lista a continuación colocado en su rellano, deje el marcador de posición o elimine la línea.
-    */
     var config = {
         fields: {
             "Name": "#name-field", // Name of a contact, submitting a case
@@ -23,7 +16,13 @@
         },
         landingId: "0fed1f55-74d4-4a42-9fab-0d67a81e9e10",
         serviceUrl: "https://cococo.creatio.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
-        redirectUrl: "https://cococo.co.cr/"
+        redirectUrl: "https://cococo.co.cr",
+        onSuccess: function (response) {
+                window.alert(response.resultMessage);
+            },
+            onError: function (response) {
+                window.alert(response.resultMessage);
+            }
     };
     /**
     * The function below creates a object from the submitted data.
