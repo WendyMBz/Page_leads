@@ -24,7 +24,6 @@
                 "Phone": "#phone-field", // Visitor's phone number
             },
             customFields: {},
-            customFields: {},
             landingId: "58185e05-a0e3-4047-8198-45691fc6935d",
             serviceUrl: "https://nir-yu.creatio.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
             redirectUrl: "",
@@ -74,7 +73,17 @@
                     <input type="text" name="Name" id="name-field" class="input"><br>
                     Teléfono:<br>
                     <input type="number" name="Phone" id="phone-field" class="input"><br><br>
-                    <input type="submit" value="Enviar">
+                     <select class="w3-input w3-border w3-light-grey input" id="necesidades" name="nececidadcliente"
+                        tabindex="1">
+                        <option selected="selected" value="">-ninguno-</option>
+                        <option value="Device">Device</option>
+                        <option value="Software">Software</option>
+                        <option value="Necesidad en nuestros Productos">Necesidad en nuestros Productos</option>
+                        <option value="Necesita nuestros servicios">Necesita nuestros servicios</option>
+                        <option value="Servicio adicional">Servicio adicional</option>
+                     </select>
+                     <input type="hidden" id="necesidades" />
+                     <input type="submit" value="Enviar">
                     </font>
                 </form>
             </div>
