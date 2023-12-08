@@ -18,10 +18,12 @@
          */
         var config = {
             fields: {
-                "Subject": "#subject-field", // Case subject
+                "LeadType": "#servicios",
+                "Contact": "#email-field", // Name of a visitor, submitting the page
+                "Account": "#subject", // Name of a company (for business landing pages)
+                "MobilePhone": "#name-field", // Visitor's phone number
                 "Email": "#email-field", // Visitor's email
-                "Name": "#name-field", // Visitor's name code
-                "Phone": "#phone-field", // Visitor's phone number
+                "Budget": "css-selector", // 
             },
             customFields: {},
             landingId: "58185e05-a0e3-4047-8198-45691fc6935d",
@@ -39,6 +41,8 @@
          * Bind this function call to the "onSubmit" event of the form or any other elements events.
          * Example: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
          */
+        var necesidades = $("#servicios option:selected").text();
+        $("#servicios").val(necesidades);
         function createObject() {
 
             landing.createObjectFromLanding(config)
@@ -73,7 +77,7 @@
                     <input type="text" name="Name" id="name-field" class="input"><br>
                     Teléfono:<br>
                     <input type="number" name="Phone" id="phone-field" class="input"><br><br>
-                     <select class="w3-input w3-border w3-light-grey input" id="necesidades" name="nececidadcliente"
+                    <select class="w3-input w3-border w3-light-grey input" id="servicios" name="serviciosCliente"
                         tabindex="1">
                         <option selected="selected" value="">-ninguno-</option>
                         <option value="Device">Device</option>
@@ -81,9 +85,9 @@
                         <option value="Necesidad en nuestros Productos">Necesidad en nuestros Productos</option>
                         <option value="Necesita nuestros servicios">Necesita nuestros servicios</option>
                         <option value="Servicio adicional">Servicio adicional</option>
-                     </select>
-                     <input type="hidden" id="necesidades" />
-                     <input type="submit" value="Enviar">
+                    </select>
+                    <input type="hidden" id="servicios" />
+                    <input type="submit" value="Enviar">
                     </font>
                 </form>
             </div>
