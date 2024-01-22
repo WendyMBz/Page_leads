@@ -17,11 +17,11 @@
          */
         var config = {
             fields: {
-            "NirYuServicesLanding": "css-selector", // services
-            "Contact": "css-selector", // Name of a visitor, submitting the page
-            "Account": "css-selector", // Name of a company (for business landing pages)
-            "MobilePhone": "css-selector", // Visitor's phone number
-            "Email": "css-selector", // Visitor's email
+            "NirYuServicesLanding": "", // services
+            "Contact": "#name-field", // Name of a visitor, submitting the page
+            "Account": "#nameCompany-field", // Name of a company (for business landing pages)
+            "MobilePhone": "#phone-field", // Visitor's phone number
+            "Email": "#email-field", // Visitor's email
             "NirYuNumberofpeoplelookingLeads": "css-selector", // Number of people looking to hire
             },
             customFields: {},
@@ -60,7 +60,6 @@
 <body>
     <main class="container flex flex--column flex--center">
         <div>
-            <img src="./img/cococo_full-color.png" alt="Logo cococo" class="logo-form">
         </div>
         <section class="cartao">
             <h1>Landing</h1>
@@ -68,13 +67,13 @@
                 <h2>Form example</h2>
                 <form class="mainForm  formulario flex flex--column" name="landingForm"
                     onSubmit="createObject(); return false">
-                    Asunto:<br>
-                    <input type="text" name="subject" id="subject-field" class="input"><br>
+                    Name:<br>
+                    <input type="text" name="subject" id="name-field" class="input"><br>
                     Email:<br>
                     <input type="email" name="Email" id="email-field" class="input"><br>
-                    Nombre:<br>
-                    <input type="text" name="Name" id="name-field" class="input"><br>
-                    Teléfono:<br>
+                    Company name:<br>
+                    <input type="text" name="Name" id="nameCompany-field" class="input"><br>
+                    Phone number:<br>
                     <input type="number" name="Phone" id="phone-field" class="input"><br><br>
                     <select class="w3-input w3-border w3-light-grey input" id="servicios" name="serviciosCliente"
                         tabindex="1">
